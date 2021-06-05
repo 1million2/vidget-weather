@@ -1,0 +1,68 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #ffc107;
+}
+
+
+.icon {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	stroke-width: 20;
+	stroke: green;
+	fill: black;
+	background-image: url("spinner6.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	transition: .3s;
+	animation-duration: 2s;
+	animation-name: rotation;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotation {
+	  0% {transform: rotate(360deg);}
+	  100% {transform: rotate(0deg);}
+}
+
+.icon:hover{
+	  transform: rotate(180deg);
+}
+
+.weather-widget {
+	margin: 20px auto 0;
+	width: 350px;
+	min-height: 130px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	border-radius: 5px;
+	background-color: #8bc34a;
+	box-shadow: 0px 0px 5px 0px;
+
+}
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+	opacity: 0;
+}
+.container-show{
+	opacity: 1;
+}
+.wind{
+	margin: 5px;
+}
+.logo-weather{
+	width: 60px;
+}
